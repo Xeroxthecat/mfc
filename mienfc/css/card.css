@@ -1,0 +1,54 @@
+
+
+@media all and (orientation:portrait) {
+body {
+  text-align: center;
+  display: grid;
+  grid-template-areas: 
+     "header header"
+     "content content" 
+    "incorrect correct";
+  }}
+
+@media all and (orientation:landscape) {
+body {
+  text-align: center;
+  display: grid;
+
+  grid-template-areas: 
+     "header header header"
+     "content content correct"
+     "content content incorrect";
+  }
+}
+
+header{
+  grid-area: header;
+}
+
+main {
+  grid-area: content;
+}
+
+.card {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  font-family: 'Indie Flower', cursive;
+}
+
+incorrect {
+  background:#ce2538;
+  grid-area: incorrect;
+}
+
+correct {
+  background:#167220;
+  grid-area: correct;
+}
+
+correct,incorrect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

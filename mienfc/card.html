@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Colors</title>
+  
+  <script src="js/card.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div id="leftMenu" class="dropdown">
+      <button type="button" data-toggle="dropdown">=</button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Colors</a>
+        <a class="dropdown-item" href="#">Numbers</a>
+        <a class="dropdown-item" href="#">Animals</a>
+      </div>
+    </div>
+
+    <a href="index.html"><h2> Mien Flash Cards </h2></a>
+
+    <div id="rightMenu">
+      <button type="button" data-toggle="dropdown">|</button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="index.html">Home</a>
+        <a class="dropdown-item" href="#">Shuffle</a>
+        <a class="dropdown-item" href="#">Reset Deck</a>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+
+    <div class="card" id="flashcard">
+      <div id="cardTop" class="card-body">
+        <img src="http://placehold.it/150x150.png" /></div>
+      <div id="cardBottom" class="card-body">Dog</div>
+    </div>
+  </main>
+
+  <correct id="right">right</correct>
+  <incorrect id="wrong">wrong</incorrect>
+
+</body>
+
+</html>
