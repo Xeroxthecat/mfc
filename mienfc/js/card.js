@@ -3,7 +3,7 @@
   window.onload = function () {
 
     //var url = 'http://simplemike.com/sandbox/test.json';
-    var url = "https://jsonplaceholder.typicode.com/todos/1";
+    var url = "http://www.json-generator.com/api/json/get/cqgtPFKIRK?indent=2";
 
     //display variables
     var picture = "";
@@ -11,8 +11,9 @@
     var wordEnglish = "";
     var wordMien = "";
 
-    //cardside
+    //tracker variables
     var front = true;
+    var arrayIndex = 0;
 
     //Colors
     function getColors() {
@@ -21,12 +22,13 @@
           return data.json();
         })
         .then(function (myJson) {
-          //console.log(JSON.stringify(myJson));
-
-          picture = myJson.title;
-          soundFile = myJson.userId;
-          wordEnglish = myJson.id;
-          wordMien = myJson.completed;
+          console.log(JSON.stringify(myJson));
+          console.log(myJson[0].animals[arrayIndex].englishWord);
+  
+          picture = myJson[0].colors[arrayIndex].image;
+          soundFile = myJson[0].colors[arrayIndex].soundFile;
+          wordEnglish = myJson[0].colors[arrayIndex].englishWord;
+          wordMien = myJson[0].colors[arrayIndex].mienWord;
 
           displayTop(picture);
           displayBottom(wordEnglish);
@@ -62,14 +64,18 @@
     
     function nextCard(){
       console.log("on to the next card");
+      arrayIndex++;
+      console.log('array index is: ' + arrayIndex)
     }
 
     function answeredCorrect(){
       console.log("i got this right");
+      nextCard();
     }
     
     function answeredWrong(){
       console.log("i got this wrong");
+      nextCard();
     }
 
 
